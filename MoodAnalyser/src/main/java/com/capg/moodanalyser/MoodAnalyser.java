@@ -6,10 +6,28 @@ package com.capg.moodanalyser;
  */
 public class MoodAnalyser 
 {
+      private String message;
 	
+	  public MoodAnalyser()
+	  {
+		
+	  }
+	  
+	  public MoodAnalyser(String message)
+	  {
+		    this.message = message;
+	  }
 	
-    public static void main( String[] args )
-    {
-        System.out.println("Welcome to Mood Analyser");
-    }
+	  public String analyseMood()
+	  {
+		    if(message.contains("I am in Sad Mood"))
+			    return  "SAD";
+		    else
+			    return "HAPPY";
+   	  }
+	
+      public static void main( String[] args )
+      {
+        
+      }
 }
