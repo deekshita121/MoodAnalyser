@@ -20,10 +20,18 @@ public class MoodAnalyser
 	
 	  public String analyseMood()
 	  {
-		    if(message.contains("I am in Sad Mood"))
+		  try
+		  {
+		     if(message.contains("I am in Sad Mood"))
 			    return  "SAD";
-		    else
+		     else
 			    return "HAPPY";
+		  }
+		  catch(NullPointerException e)
+		  {
+			  return "HAPPY";
+		  }
+		  
    	  }
 	
       public static void main( String[] args )
